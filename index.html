@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing game</title>
+    <style>
+        /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper styling */
+#wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Form styling */
+form.form {
+    margin-top: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input field styling */
+input.guessfield {
+    width: calc(100% - 24px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Submit button styling */
+input.guessSubmit {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input.guessSubmit:hover {
+    background-color: #218838;
+}
+
+/* Result paragraphs styling */
+.resultParas {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.resultParas p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.resultParas .guesses,
+.resultParas .lastResult,
+.resultParas .lowOrHi {
+    font-weight: bold;
+}
+
+.resultParas .lowOrHi {
+    color: #d9534f;
+}
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number guessing game</h1>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempt to guess the right number.</p>
+    </br>
+        <form class="form">
+            <label for="guessfield" id="guess"> Guess a number</label2>
+                <input type="text" id="guessfield" class="guessfield">
+                <input type="submit" id="subt" value="submit guess"
+                class="guessSubmit">
+                
+        </form>
+         <div class="resultParas">
+            <p>Previous guess: <span class="guesses"></span></p>
+            <p>Remaining guess: <span class="lastResult">10</span>></span></p>
+            <p class="lowOrHi"></p>
+
+         </div>
+
+    </div>
+</body>
+<script>
+    // method to generate random numbers
+    const randomNumber=parseInt(Math.random()*100 +1);// *100 +1 isliye kie kyuki humko rumber 1 se 100 kw bich me chaiye tha
+    const submit=document.querySelector('#subt');
+    const UserInput=document.querySelector('#guessField');
+    const guessSlot=document.querySelector('.guesses');
+    const remaining=document.querySelector('.lastResult');
+    const lowOrhi=document.querySelector('. lowOrhi');
+    const startOver=document.querySelector('.resultParas');
+
+    const p=document.createElement('p')
+
+    let orevGuess=[] // prevguess jo humne kie hai usko array me store krne ke liye taki user same nuber doobara guess na kre
+    let numGuess=1 // ye remaining guess btyega aur isko 1 se initaite kie hai
+
+    let playGame=true;
+    
+
+
+</script>
+</html>
